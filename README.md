@@ -1,3 +1,34 @@
+
+redis-port build
+===========
+$ mkdir gitredisport
+
+$ cd gitredisport/
+
+$ git init
+
+$ git clone https://github.com/CodisLabs/redis-port.git
+
+$ git submodule init & git submodule update
+
+$ cd redis-port/
+
+$ git submodule init & git submodule update
+
+###直接make是有错误的，[需要下载第三方库](https://github.com/CodisLabs/codis/blob/release3.2/doc/tutorial_zh.md)
+
+$ cd $GOPATH/src/github.com/CodisLabs/
+
+$ git clone https://github.com/CodisLabs/codis.git -b release3.2
+
+$ cd codis/
+
+$ make
+
+使用例子
+$ $GOPATH/src/github.com/CodisLabs/redis-port/bin/redis-restore --input=input.rdb --target=密码@host:port
+
+
 redis-port
 ===========
 
